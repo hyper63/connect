@@ -1,0 +1,17 @@
+{
+  "name": "@hyper.io/connect",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/hyper63/connect.git",
+  "author": "Tom Wilson <twilson63@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "jsonwebtoken": "^8.5.1"
+  },
+  "scripts": {
+    "test": "HYPER=hyperio://u:p@test.hyper.io/foo tape index_test.js"
+  },
+  "devDependencies": {
+    "tape": "^5.2.2"
+  }
+}
