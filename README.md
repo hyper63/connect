@@ -30,17 +30,18 @@ Use the `@hyper.io/connect` module in your Data Access Layer (DAL)
 import hyper from '@hyper.io/connect'
 
 async function query(selector) {
-await fetch(hyper.url('data') + '/_query', {
-  method: 'POST',
-  headers: {
-    'Content-Type': 'application/json',
-    Authorization: `Bearer ${hyper.token()}`
-  },
-  body: JSON.stringify({
-    selector
+  await fetch(hyper.url('data') + '/_query', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+      Authorization: `Bearer ${hyper.token()}`
+    },
+    body: JSON.stringify({
+      selector
+    })
   })
   .then(r => r.json())
-})
+}
 
 query({ type: 'widget'}).then(console.log.bind(console))
 ```
