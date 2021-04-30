@@ -9,7 +9,7 @@
     "jsonwebtoken": "^8.5.1"
   },
   "scripts": {
-    "test": "HYPER=hyperio://u:p@test.hyper.io/foo tape index_test.js"
+    "test": "HYPER=hyperio://u:p@test.hyper63.com/foo tape index_test.js"
   },
   "devDependencies": {
     "tape": "^5.2.2"
