@@ -56,10 +56,11 @@ or
 
 ## Features
 
-* url
+* url (service : string, ...paths : string) : string
 
 This method takes a hyper service port as an argument
-and returns a full url to access the service for an app.
+and optional path argurments and returns a full url 
+to access the service for an app.
 
 Currently, hyper supports the following service ports:
 
@@ -69,13 +70,14 @@ Currently, hyper supports the following service ports:
 * storage
 * queue
 
+
 ``` js
 import hyper from '@hyper.io/connect'
 
-console.log(hyper.url('search'))
+console.log(hyper.url('search', '_search'))
 ```
 
-* token
+* token ( payload: object ) : string
 
 This method takes no arguments and returns a token based on the 
 hyper connection string that should give the client secure access
